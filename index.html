@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="practice10.js"></script>
+    <script>
+        function cambiarColorFondo(idFila) {
+          var fila = document.getElementById(idFila);
+          fila.style.backgroundColor = "#ffcc00";
+        }
+      </script>
+      <style>
+        table,
+        th,
+        td {
+          border: 1px solid black;
+          padding: 10px;
+          text-align: center;
+        }
+        td:hover {
+          background-color: yellow;
+        }
+      </style>
+</head>
+<body>
+    <h1>Tabla de Cambio de Color de Fondo Permanente</h1>
+  <table>
+    <tr id="fila1" onclick="cambiarColorFondo('fila1')">
+        <td>Fila 1, columna 1</td>
+        <td>Fila 1, columna 2</td>
+      </tr>
+      <tr id="fila2" onclick="cambiarColorFondo('fila2')">
+        <td>Fila 2, columna 1</td>
+        <td>Fila 2, columna 2</td>
+      </tr>
+  </table>
+  <h1>Tablas de Cambio de Contenido</h1>
+    <button onclick="cambiarContenido()">Cambiar contenido</button>
+    <table id="tabla1">
+      <tr>
+        <td>Texto1</td>
+        <td>Texto2</td>
+        <td>Texto3</td>
+      </tr>
+      <tr>
+        <td>Texto4</td>
+        <td>Texto5</td>
+        <td>Texto6</td>
+      </tr>
+      <tr>
+        <td>Texto7</td>
+        <td>Texto8</td>
+        <td>Texto9</td>
+      </tr>
+    </table>
+    <table id="tabla2">
+      <tr>
+        <td>Texto10</td>
+        <td>Texto11</td>
+        <td>Texto12</td>
+      </tr>
+      <tr>
+        <td>Texto13</td>
+        <td>Texto14</td>
+        <td>Texto15</td>
+      </tr>
+      <tr>
+        <td>Texto16</td>
+        <td>Texto17</td>
+        <td>Texto18</td>
+      </tr>
+    </table>
+    <h1>Tabla con Cambio de Color</h1>
+    <table>
+      <tr>
+        <td>1A</td>
+        <td>1B</td>
+      </tr>
+      <tr>
+        <td>2A</td>
+        <td>2B</td>
+      </tr>
+    </table>
+</body>
+</html>
