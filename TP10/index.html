@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>  
+    <style>
+        table, tr, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 10px;
+        }
+    
+        .selected {
+          background-color: yellow;
+        }
+      </style>  
+</head>
+<body>
+    <h1>Cambiar el color de fondo de filas de una tabla al presionarlas</h1>
+  <table id="tabla1">
+    <tr><td>Fila 1</td></tr>
+    <tr><td>Fila 2</td></tr>
+    <tr><td>Fila 3</td></tr>
+  </table>
+  <table>
+    <tr><td>Fila 1</td></tr>
+    <tr><td>Fila 2</td></tr>
+    <tr><td>Fila 3</td></tr>
+  </table>
+  <script>
+    var tabla1 = document.getElementById("tabla1");
+    var filasTabla1 = tabla1.getElementsByTagName("tr");
+    for (var i = 0; i < filasTabla1.length; i++) {
+      filasTabla1[i].addEventListener("click", function() {
+        this.classList.toggle("selected");
+      });
+    }
+  </script>
+  <h1>Palabras con Strong</h1>
+  <p>Estas son algunas palabras con <strong onclick="ocultarPalabra(event)">strong</strong>:</p>
+  <ul>
+    <li><strong onclick="ocultarPalabra(event)">Programación</strong></li>
+    <li><strong onclick="ocultarPalabra(event)">Desarrollo web</strong></li>
+    <li><strong onclick="ocultarPalabra(event)">HTML</strong></li>
+    <li><strong onclick="ocultarPalabra(event)">Argentina Programa</strong></li>
+    <li><strong onclick="ocultarPalabra(event)">JavaScript</strong></li>
+  </ul>
+  <p>Al hacer clic en una palabra con <strong>strong</strong>, se oculta.</p>
+  <h1>Evitar que un link salga de la página al hacer click</h1>
+
+  <p>Este es un <a href="https://www.google.com" id="miLink" onclick="manejarClick(event)">link a Google</a>.</p>
+</body>
+</html>
